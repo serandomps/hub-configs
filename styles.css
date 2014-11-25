@@ -1,5 +1,6 @@
 .hub-configs .cname {
     font-weight: bold;
+    word-break: break-all;
 }
 
 .hub-configs .toolbar {
