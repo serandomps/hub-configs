@@ -32,7 +32,7 @@ var list = function (options, parent, done) {
                 $('.delete', el).on('click', function () {
                     $.ajax({
                         method: 'DELETE',
-                        url: '/apis/v/configs/' + $(this).parent().data('id'),
+                        url: '/apis/v/configs/' + $(this).parent().data('name'),
                         headers: {
                             'x-host': 'hub.serandives.com:4000'
                         },
