@@ -15,7 +15,7 @@ var list = function (options, parent, done) {
     $.ajax({
         url: '/apis/v/configs',
         headers: {
-            'x-host': 'hub.serandives.com:4000'
+            'X-Host': 'hub.serandives.com:4000'
         },
         dataType: 'json',
         success: function (data) {
@@ -34,7 +34,7 @@ var list = function (options, parent, done) {
                         method: 'DELETE',
                         url: '/apis/v/configs/' + $(this).parent().data('name'),
                         headers: {
-                            'x-host': 'hub.serandives.com:4000'
+                            'X-Host': 'hub.serandives.com:4000'
                         },
                         dataType: 'json',
                         success: function (data) {
@@ -67,7 +67,7 @@ var add = function (options, parent, done) {
                 method: 'POST',
                 url: '/apis/v/configs',
                 headers: {
-                    'x-host': 'hub/serandives.com:4000'
+                    'X-Host': 'hub/serandives.com:4000'
                 },
                 data: {
                     name: $('.name', el).val(),
@@ -93,7 +93,7 @@ var details = function (options, parent, done) {
     $.ajax({
         url: '/apis/v/domains/' + options.id,
         headers: {
-            'x-host': 'hub.serandives.com:4000'
+            'X-Host': 'hub.serandives.com:4000'
         },
         dataType: 'json',
         success: function (data) {
@@ -106,7 +106,7 @@ var details = function (options, parent, done) {
                 $.ajax({
                     url: '/apis/v/servers',
                     headers: {
-                        'x-host': 'hub.serandives.com:4000'
+                        'X-Host': 'hub.serandives.com:4000'
                     },
                     dataType: 'json',
                     success: function (data) {
@@ -209,7 +209,7 @@ serand.on('hub', 'domains list', function (id) {
     $.ajax({
         url: '/apis/v/domains',
         headers: {
-            'x-host': 'hub.serandives.com:4000'
+            'X-Host': 'hub.serandives.com:4000'
         },
         dataType: 'json',
         success: function (data) {
