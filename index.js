@@ -71,7 +71,7 @@ var add = function (options, parent, done) {
                 },
                 data: {
                     name: $('.name', el).val(),
-                    value: $('.value', el).val()
+                    value: JSON.parse($('.value', el).val())
                 },
                 dataType: 'json',
                 success: function (data) {
